@@ -1,7 +1,5 @@
 package edu.miu.cs.cs425.studentmgmtapp;
 
-import javax.validation.constraints.NotNull;
-
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -10,19 +8,19 @@ import edu.miu.cs.cs425.studentmgmtapp.model.Student;
 import edu.miu.cs.cs425.studentmgmtapp.service.StudentService;
 
 @SpringBootApplication
-public class DemoApplication implements CommandLineRunner {
+public class StudentManagementApplication implements CommandLineRunner {
 	
 	private StudentService studentService;
 	
 
-	public DemoApplication(StudentService studentService) {
+	public StudentManagementApplication(StudentService studentService) {
 		super();
 		this.studentService = studentService;
 	}
 
 
 	public static void main(String[] args) {
-		SpringApplication.run(DemoApplication.class, args);
+		SpringApplication.run(StudentManagementApplication.class, args);
 	}
 	
 
