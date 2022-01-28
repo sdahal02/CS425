@@ -1,0 +1,16 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="elibrary-democrud-n-search-web:war">
+    <output-path>$PROJECT_DIR$/../../../elibrary-democrud-n-search-web/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <exploded>false</exploded>
+        <module>elibrary-democrud-n-search-web</module>
+        <packaging>war</packaging>
+        <unpackNestedArchives>false</unpackNestedArchives>
+      </options>
+    </properties>
+    <root id="archive" name="${project.artifactId}-${project.version}.war">
+      <element id="artifact" artifact-name="elibrary-democrud-n-search-web:war exploded" />
+    </root>
+  </artifact>
+</component>

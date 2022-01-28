@@ -1,0 +1,27 @@
+package edu.miu.cs.cs425.eregistrar.service.impl;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import edu.miu.cs.cs425.eregistrar.model.Student;
+import edu.miu.cs.cs425.eregistrar.repository.StudentRepository;
+import edu.miu.cs.cs425.eregistrar.service.StudentService;
+
+@Service
+public class StudentServiceImpl implements StudentService{
+	@Autowired
+	private StudentRepository repository;
+
+	@Override
+	public List<Student> getAllBooks() {
+		return (List<Student>)repository.findAll();
+	}
+
+	@Override
+	public Student saveStudent(Student student) {
+		return repository.save(student);
+	}	
+
+}
