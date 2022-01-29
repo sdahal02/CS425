@@ -1,0 +1,15 @@
+// Add new book
+{
+	"isbn": "978-0135974445",
+	"title": "Agile Software Development",
+	"overdueFee": 1.05,
+	"publisher": "Prentice-Hall",
+	"datePublished": "2002-10-25"
+},
+{
+	"isbn": "000-00000000001",
+	"title": "Some Dummy Book to be deleted",
+	"overdueFee": 15.95,
+	"publisher": "John Wiley",
+	"datePublished": "1997-07-26"
+}
