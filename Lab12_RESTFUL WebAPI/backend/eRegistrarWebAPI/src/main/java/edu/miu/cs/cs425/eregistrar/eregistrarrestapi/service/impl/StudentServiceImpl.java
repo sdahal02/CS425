@@ -19,7 +19,7 @@ public class StudentServiceImpl implements StudentService {
 
     @Override
     public List<Student> getAllStudents() {
-        return studentRepository.findAll(Sort.by("title"));
+        return studentRepository.findAll(Sort.by("firstName"));
     }
 
     @Override

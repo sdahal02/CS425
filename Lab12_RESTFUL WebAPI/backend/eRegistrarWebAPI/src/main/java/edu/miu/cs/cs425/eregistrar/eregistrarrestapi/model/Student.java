@@ -1,7 +1,5 @@
 package edu.miu.cs.cs425.eregistrar.eregistrarrestapi.model;
 
-import org.springframework.format.annotation.DateTimeFormat;
-
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import java.time.LocalDate;
@@ -31,6 +29,17 @@ public class Student {
     }
 
     public Student(String studentNumber, String firstName, String middleName, String lastName, Float cgpa, LocalDate enrollmentDate, Boolean isInternational) {
+        this.studentNumber = studentNumber;
+        this.firstName = firstName;
+        this.middleName = middleName;
+        this.lastName = lastName;
+        this.cgpa = cgpa;
+        this.enrollmentDate = enrollmentDate;
+        this.isInternational = isInternational;
+    }
+
+    public Student(Integer studentId, String studentNumber, String firstName, String middleName, String lastName, Float cgpa, LocalDate enrollmentDate, Boolean isInternational) {
+        this.studentId = studentId;
         this.studentNumber = studentNumber;
         this.firstName = firstName;
         this.middleName = middleName;
