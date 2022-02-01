@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>InventoryMGMT - Products</title>
+</head>
+<body>
+<header>
+    <nav>
+        <a href="/"> Home</a> ||
+        <a href="/inventorymgmt/product/list"> Products</a> ||
+        <a href="#"> About Us</a> ||
+        <a href="#"> Contact Us</a>
+    </nav>
+</header>
+<div>
+    <h1>List of Products</h1>
+    <div>
+        <table cellpadding="5" cellspacing="0" border="1">
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>Product Number</th>
+                <th>Name</th>
+                <th>Unit Price</th>
+                <th>Quantity In Stock</th>
+                <th>Date Supplied</th>
+                
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="product, counter : ${products}">
+                <th scope="row" th:text="${counter.count}"></th>
+                <td th:text="${product.productNumber}"></td>
+                <td th:text="${product.productName}"></td>
+                <td th:text="${product.unitPrice}"></td>
+                <td th:text="${product.quantityInStock}"></td>
+                <td th:text="${product.dateSupplied}"></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>
